@@ -23,7 +23,8 @@
             isConnecting = _isConnecting, isConnected = _isConnected;
 
 - (id)initWithHost:(NSString *)host port:(int)port {
-  if (self = [super init]) {
+  self = [super init];
+  if (self) {
     _host = [host retain];
     _port = port;
     _queue = [[NSMutableArray array] retain];
